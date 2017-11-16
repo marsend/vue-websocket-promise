@@ -22,17 +22,17 @@
     },
     methods: {
       sendRequest() {
-        this.request(constants.socketAPI.courseGetInfo).then((resp) => {
+        this.socketRequest(constants.socketAPI.courseGetInfo).then((resp) => {
           console.group('handle courseGetInfo request')
           console.log(resp)
           console.groupEnd()
-          this.request(constants.socketAPI.courseRoomInfo).then((resp) => {
+          this.socketRequest(constants.socketAPI.courseRoomInfo).then((resp) => {
             console.group('handle courseRoomInfo request')
             console.log(resp)
             console.groupEnd()
           })
         })
-        this.request(constants.socketAPI.courseRoomInfo).then((resp) => {
+        this.socketRequest(constants.socketAPI.courseRoomInfo).then((resp) => {
           console.group('handle courseRoomInfo request')
           console.log(resp)
           console.groupEnd()
